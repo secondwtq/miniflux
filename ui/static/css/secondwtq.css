@@ -2,10 +2,59 @@
 body {
     font-family:
         'Franklin Gothic Book',
-        'Helvetica Neue',
-        Arial,
+        'Verdana',
         'Hiragino Sans GB',
+        STHeiti,
         sans-serif;
+}
+
+.header li {
+    display: inline;
+    line-height: normal;
+    border: 0;
+    padding: 0;
+    padding-right: 14px;
+    font-size: 1em;
+}
+
+.header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    padding-left: 14px;
+    background-color: #dc143c;
+}
+
+@media (max-width: 599px) {
+    html {
+        font-size: 14px;
+    }
+    .header {
+        margin-top: 0;
+        padding-top: 6px;
+    }
+    .header li {
+        padding-right: 2px;
+    }
+    .header a {
+        font-size: 10px;
+    }
+    .page-header {
+        font-size: .8em;
+    }
+}
+
+@media (min-width: 600px) {
+}
+
+.header nav ul {
+    display: block;
+}
+
+.logo {
+    text-align: left;
+    float: left;
+    margin-right: 15px;
 }
 
 .item-meta-siteurl {
@@ -16,12 +65,27 @@ body {
     float: right;
 }
 
-.header {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-    padding-left: 14px;
-    background-color: #dc143c;
+.logo a {
+    font-family: "Adobe Garamond Pro", "Garamond";
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: .2px;
+}
+
+.logo a > span:first-child {
+    font-variant: small-caps;
+    color: white;
+}
+
+.logo a > span:last-child {
+    color: #FFD942;
+    font-style: italic;
+}
+
+.logo a > span:last-child > span {
+    color: #FFD942;
+    font-style: italic;
 }
 
 .header a {
@@ -34,4 +98,34 @@ body {
 
 .header nav ul {
     text-transform: uppercase;
+}
+
+.unread-counter-wrapper {
+    color: #6bebff;
+}
+
+.page-header {
+    margin-bottom: 1em;
+}
+
+.item {
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    margin-bottom: 1px;
+}
+
+.item:hover {
+    background-color: #f8f8f8;
+}
+
+.item-title a {
+    font-weight: 500;
+    font-family:
+        Cambria,
+        "Iowan Old Style",
+        "Source Han Serif SC",
+        "Songti SC",
+        serif,
+        "Hiragino Sans GB";
 }
