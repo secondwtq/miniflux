@@ -163,6 +163,10 @@ body {
         "Hiragino Sans GB";
 }
 
+.item-status-read .item-title a {
+    color: black;
+}
+
 .entry header {
     border: none;
     padding-bottom: 0;
