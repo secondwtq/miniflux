@@ -42,9 +42,19 @@ body {
     .page-header {
         font-size: .8em;
     }
-}
-
-@media (min-width: 600px) {
+    .page-header h1 {
+        border: none;
+    }
+    .page-header ul {
+        max-width: 50%;
+    }
+    .entry-content {
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+    .entry header h1 {
+        margin-top: .6em;
+    }
 }
 
 .header nav ul {
@@ -108,6 +118,24 @@ body {
     margin-bottom: 1em;
 }
 
+.page-header > ul {
+    float: right;
+}
+
+.page-header ul {
+    margin-left: 0;
+}
+
+.page-header li {
+    display: inline;
+}
+
+.page-header::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
 .item {
     border-left: none;
     border-right: none;
@@ -119,7 +147,12 @@ body {
     background-color: #f8f8f8;
 }
 
+.item-title img {
+    vertical-align: middle;
+}
+
 .item-title a {
+    vertical-align: middle;
     font-weight: 500;
     font-family:
         Cambria,
@@ -128,4 +161,112 @@ body {
         "Songti SC",
         serif,
         "Hiragino Sans GB";
+}
+
+.entry header {
+    border: none;
+    padding-bottom: 0;
+}
+
+.entry header h1 {
+    font-size: 1.4em;
+    font-family:
+        Crimson,
+        'Iowan Old Style',
+        "Source Han Serif SC",
+        'Hiragino Sans GB',
+        STHeiti,
+        serif;
+    margin-top: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.entry header h1 a {
+    float: left;
+}
+
+.entry header h1::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.entry-date {
+    float: right;
+}
+
+.entry-content {
+    color: black;
+    font-size: 1em;
+    font-weight: 400;
+    font-family:
+        Crimson,
+        'Iowan Old Style',
+        "Source Han Serif SC",
+        'Hiragino Sans GB',
+        STHeiti,
+        serif;
+    line-height: 1.6em;
+}
+
+.entry-actions {
+    font-size: .8em;
+    padding-bottom: .5em;
+    margin-bottom: .4em;
+    border-bottom: 1px solid lightgrey;
+}
+
+.entry-actions a {
+    color: #444;
+}
+
+.entry-meta {
+    margin: 0;
+    font-family:
+        Optima,
+        'Hiragino Sans GB',
+        STHeiti,
+        sans-serif;
+    font-weight: 600;
+    font-size: .8em;
+    color: #333;
+}
+
+.entry-meta span {
+    vertical-align: middle;
+}
+
+.entry-meta a {
+    vertical-align: middle;
+}
+
+.entry-meta em {
+    vertical-align: middle;
+}
+
+.category {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 400;
+}
+
+.entry-website img {
+    vertical-align: middle;
+}
+
+.entry-content {
+    padding-top: 0;
+    margin-top: 18px;
+}
+
+@media (min-width: 600px) {
+    .entry-content {
+        font-size: 15px;
+    }
+
+    .page-header h1 {
+        padding-bottom: 0.3em;
+    }
+    .page-header li {
+        padding-right: 15px;
+    }
 }

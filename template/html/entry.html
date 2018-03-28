@@ -6,6 +6,9 @@
         <h1>
             <a href="{{ .entry.URL }}" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">{{ .entry.Title }}</a>
         </h1>
+        <div class="entry-date">
+            <time datetime="{{ isodate .entry.Date }}" title="{{ isodate .entry.Date }}">{{ elapsed $.user.Timezone .entry.Date }}</time>
+        </div>
         <div class="entry-actions">
             <ul>
                 <li>
@@ -34,7 +37,7 @@
                         data-fetch-content-url="{{ route "fetchContent" "entryID" .entry.ID }}"
                         data-label-loading="{{ t "Loading..." }}"
                         data-label-done="{{ t "Done!" }}"
-                        >{{ t "Fetch original content" }}</a>
+                        >{{ t "Fetch original" }}</a>
                 </li>
             </ul>
         </div>
@@ -58,15 +61,7 @@
                 <a href="{{ route "categoryEntries" "categoryID" .entry.Feed.Category.ID }}">{{ .entry.Feed.Category.Title }}</a>
             </span>
         </div>
-        <div class="entry-date">
-            <time datetime="{{ isodate .entry.Date }}" title="{{ isodate .entry.Date }}">{{ elapsed $.user.Timezone .entry.Date }}</time>
-        </div>
     </header>
-    {{ if gt (len .entry.Content) 120 }}
-    <div class="pagination-top">
-        {{ template "entry_pagination" . }}
-    </div>
-    {{ end }}
     <article class="entry-content">
         {{ noescape (proxyFilter .entry.Content) }}
     </article>
