@@ -1,0 +1,37 @@
+
+body {
+    font-family:
+        'Franklin Gothic Book',
+        'Helvetica Neue',
+        Arial,
+        'Hiragino Sans GB',
+        sans-serif;
+}
+
+.item-meta-siteurl {
+    float: right;
+}
+
+.category {
+    float: right;
+}
+
+.header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    padding-left: 14px;
+    background-color: #dc143c;
+}
+
+.header a {
+    color: white;
+}
+
+.header li:hover a, .header a:hover, .header a:focus {
+    color: navajowhite;
+}
+
+.header nav ul {
+    text-transform: uppercase;
+}

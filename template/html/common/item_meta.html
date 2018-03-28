@@ -2,7 +2,7 @@
 <div class="item-meta">
     <ul>
         <li>
-            <a href="{{ route "feedEntries" "feedID" .entry.Feed.ID }}" title="{{ .entry.Feed.Title }}">{{ domain .entry.Feed.SiteURL }}</a>
+            <a href="{{ route "feedEntries" "feedID" .entry.Feed.ID }}" title="{{ .entry.Feed.Title }}">{{ .entry.Feed.Title }}</a>
         </li>
         <li>
             <time datetime="{{ isodate .entry.Date }}" title="{{ isodate .entry.Date }}">{{ elapsed .user.Timezone .entry.Date }}</time>
@@ -33,10 +33,13 @@
             <a href="#"
                 title="{{ t "Change entry status" }}"
                 data-toggle-status="true"
-                data-label-read="✔ {{ t "Read" }}"
-                data-label-unread="✘ {{ t "Unread" }}"
+                data-label-read="√ {{ t "Read" }}"
+                data-label-unread="× {{ t "Unread" }}"
                 data-value="{{ if eq .entry.Status "read" }}read{{ else }}unread{{ end }}"
-                >{{ if eq .entry.Status "read" }}✘ {{ t "Unread" }}{{ else }}✔ {{ t "Read" }}{{ end }}</a>
+                >{{ if eq .entry.Status "read" }}× {{ t "Unread" }}{{ else }}√ {{ t "Read" }}{{ end }}</a>
+        </li>
+        <li class="item-meta-siteurl">
+            <a href="{{ route "feedEntries" "feedID" .entry.Feed.ID }}" title="{{ .entry.Feed.Title }}">{{ domain .entry.Feed.SiteURL }}</a>
         </li>
     </ul>
 </div>

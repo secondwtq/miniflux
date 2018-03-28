@@ -11,6 +11,7 @@ func Themes() map[string]string {
 	return map[string]string{
 		"default": "Default",
 		"black":   "Black",
+		"secondwtq":   "secondwtq",
 	}
 }
 
