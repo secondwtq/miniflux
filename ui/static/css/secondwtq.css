@@ -54,6 +54,8 @@ body {
     }
     .entry header h1 {
         margin-top: .6em;
+        padding-left: .5em !important;
+        padding-right: 1em !important;
     }
 }
 
@@ -112,6 +114,10 @@ body {
 
 .unread-counter-wrapper {
     color: #6bebff;
+}
+
+main {
+    padding: 0;
 }
 
 .page-header {
@@ -196,6 +202,7 @@ body {
 }
 
 .entry-date {
+    padding-right: .3em;
     float: right;
 }
 
@@ -211,12 +218,25 @@ body {
         STHeiti,
         serif;
     line-height: 1.6em;
+    padding-top: 0;
+    margin-top: 18px;
+}
+
+.entry-content blockquote {
+    border-left-width: 1px;
+    margin: .75em;
+    margin-right: 0;
+    padding-left: .75em;
+    font-size: 0.96em;
+    font-family: inherit;
+    line-height: inherit;
 }
 
 .entry-actions {
     font-size: .8em;
     padding-bottom: .5em;
     margin-bottom: .4em;
+    padding-left: .3em;
     border-bottom: 1px solid lightgrey;
 }
 
@@ -226,6 +246,7 @@ body {
 
 .entry-meta {
     margin: 0;
+    padding: 0 .3em;
     font-family:
         Optima,
         'Hiragino Sans GB',
@@ -257,9 +278,9 @@ body {
     vertical-align: middle;
 }
 
-.entry-content {
-    padding-top: 0;
-    margin-top: 18px;
+.pagination {
+    padding-left: .3em;
+    padding-right: .3em;
 }
 
 @media (min-width: 600px) {
