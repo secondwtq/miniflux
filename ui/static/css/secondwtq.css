@@ -57,6 +57,11 @@ body {
         padding-left: .5em !important;
         padding-right: 1em !important;
     }
+
+    .entry-content pre {
+        margin-left: -12px;
+        margin-right: -12px;
+    }
 }
 
 .header nav ul {
@@ -225,11 +230,30 @@ main {
 .entry-content blockquote {
     border-left-width: 1px;
     margin: .75em;
+    margin-bottom: 1em;
     margin-right: 0;
     padding-left: .75em;
     font-size: 0.96em;
     font-family: inherit;
     line-height: inherit;
+}
+
+.entry-content blockquote + p {
+    color: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+}
+
+.entry-content pre {
+    padding: .8em;
+    font-size: 12px;
+    line-height: 18px;
+    border: none;
+    background-color: #f6f6f6;
+}
+
+.entry-content pre code {
+    font-family: "Fira Code", monospace;
 }
 
 .entry-actions {
