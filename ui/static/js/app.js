@@ -752,8 +752,8 @@ document.addEventListener("DOMContentLoaded", function() {
     keyboardHandler.on("p", () => navHandler.goToPrevious());
     keyboardHandler.on("k", () => navHandler.goToNext());
     keyboardHandler.on("n", () => navHandler.goToNext());
-    keyboardHandler.on("h", () => navHandler.goToPage("previous"));
-    keyboardHandler.on("l", () => navHandler.goToPage("next"));
+    // keyboardHandler.on("h", () => navHandler.goToPage("previous"));
+    // keyboardHandler.on("l", () => navHandler.goToPage("next"));
     keyboardHandler.on("o", () => navHandler.openSelectedItem());
     keyboardHandler.on("v", () => navHandler.openOriginalLink());
     keyboardHandler.on("m", () => navHandler.toggleEntryStatus());
